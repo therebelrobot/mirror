@@ -62,6 +62,7 @@ module.exports = {
     callbackURL: '/auth/instagram/callback',
     passReqToCallback: true
   },
+  
 
   github: {
     clientID: process.env.GITHUB_ID || 'b2185cd0bebb412ea9d3',
