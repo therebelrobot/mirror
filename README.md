@@ -21,12 +21,15 @@ Making a brand new iterative work? What do you do if you want to fork and break 
 Already use manualfork? Want to have your repo mirrored instead of forked? Add a badge to your repo!
 
 ![manualfork this repo](http://manualfork.therebelrobot.com/badge-large.svg)
+
 `[![manualfork this repo](http://manualfork.therebelrobot.com/badge-large.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)`
 
 ![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)
+
 `[![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)`
 
 ![manualfork this repo](http://manualfork.therebelrobot.com/badge-small.svg)
+
 `[![manualfork this repo](http://manualfork.therebelrobot.com/badge-small.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)`
 
 ## cli utility

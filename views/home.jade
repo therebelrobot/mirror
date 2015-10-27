@@ -47,10 +47,10 @@ block content
           input(type='hidden', name='_csrf', value=_csrf)
           .form-group
             label(for='source') Source Repo
-            input.form-control(name='source' type='text' placeholder='username/repo')
+            input.form-control(name='source' type='text' placeholder='username/repo' v-model='params.source')
           .form-group
             label(for='target') Target Repo
-            input.form-control(name='target' type='text' placeholder='username/repo')
+            input.form-control(name='target' type='text' placeholder='username/repo' v-model='params.target')
           .checkbox
             label(for="create")
               input(type="checkbox", name="create", checked)
