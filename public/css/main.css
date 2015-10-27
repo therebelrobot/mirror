@@ -12391,3 +12391,161 @@ footer p, footer ul {
   display: inline-block;
   width: auto;
 }
+
+.fork-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fork-list li {
+  width: 100%;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+  padding: 10px;
+  /* Container for Progress Bar STARTS */
+  /* Container for Progress Bar ENDS */
+  /* Progress Bar STARTS */
+  /* Progress Bar ENDS */
+  /* Colors STARTS*/
+  /* Colors ENDS*/
+}
+
+.fork-list li:last-child {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+}
+
+.fork-list li .title {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.fork-list li .upstream {
+  color: #aaa;
+  font-size: 0.7em;
+}
+
+.fork-list li .date {
+  color: #aaa;
+  font-size: 0.7em;
+  float: right;
+  margin-top: 3px;
+}
+
+.fork-list li .container {
+  background-color: #F1F1F1;
+  border-radius: 10px;
+  height: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.fork-list li .progressbar {
+  height: 100%;
+  width: 0%;
+  float: left;
+}
+
+.fork-list li .red {
+  background-color: #C33;
+}
+
+.fork-list li .blue {
+  background-color: #09F;
+}
+
+.fork-list li .green {
+  background-color: #6F0;
+}
+
+.fork-list li .yellow {
+  background-color: #FC0;
+}
+
+.fork-list li .orange {
+  background-color: #F60;
+}
+
+.fork-list li .container.active .progressbar {
+  -webkit-animation: bars 5s linear infinite;
+  animation: bars 5s linear infinite;
+}
+
+.fork-list li .striped .progressbar {
+  background-size: 40px 40px;
+  background-image: linear-gradient(135deg, #fff 50%, transparent 50%, transparent 50%, #fff 50%, white 50%, transparent 50%, transparent);
+  background-image: -webkit-linear-gradient(135deg, #fff 50%, transparent 50%, transparent 50%, #fff 50%, #fff 50%, transparent 50%, transparent);
+}
+
+.fork-list li .striped .red {
+  background-image: -webkit-linear-gradient(90deg, #F33 25%, transparent 25%, transparent 50%, #F33 50%, #F33 75%, transparent 75%, transparent);
+  background-image: linear-gradient(90deg, #F33 25%, transparent 25%, transparent 50%, #F33 50%, #F33 75%, transparent 75%, transparent);
+}
+
+.fork-list li .striped .blue {
+  background-image: -webkit-linear-gradient(135deg, #0CF 25%, transparent 25%, transparent 50%, #0CF 50%, #0CF 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, #0CF 25%, transparent 25%, transparent 50%, #0CF 50%, #0CF 75%, transparent 75%, transparent);
+}
+
+@-webkit-keyframes bars {
+  from {
+    background-position: 40px 0;
+  }
+  to
+{
+    background-position: 0 0;
+  }
+}
+
+@keyframes bars {
+  from {
+    background-position: 40px 0;
+  }
+  to
+{
+    background-position: 0 0;
+  }
+}
+
+code {
+  border: solid 1px #aaa;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+code.copy {
+  max-width: 90%;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: block;
+  float: right;
+  margin-bottom: 15px;
+}
+
+.float.left {
+  float: left;
+}
+
+.float.right {
+  float: right;
+}
+
+.float.none {
+  float: none;
+}
+
+.badge-box {
+  margin-bottom: 10px;
+}
+
+.badge-box img {
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+img.npm {
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}

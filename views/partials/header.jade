@@ -22,7 +22,7 @@
                 img(src='#{user.profile.picture}')
               else
                 img(src='#{user.gravatar(60)}')
-              | #{user.profile.name || user.email || user.id}&nbsp;
+              | #{user.githubUsername || user.profile.name || user.email || user.id}&nbsp;
               i.caret
             ul.dropdown-menu
               li

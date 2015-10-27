@@ -1,5 +1,8 @@
 $(document).ready(function() {
-
-  // Place JavaScript code here...
-
+  window.vm =  new Vue({
+    el: '#vue-app',
+    data: {
+      input: '# hello'
+    }
+  })
 });

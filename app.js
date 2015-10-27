@@ -26,6 +26,7 @@ var sass = require('node-sass-middleware');
  * Controllers (route handlers).
  */
 var homeController = require('./controllers/home');
+var mirrorController = require('./controllers/mirror');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
@@ -106,12 +107,13 @@ app.get('/account', passportConf.isAuthenticated, userController.getAccount);
 app.post('/account/profile', passportConf.isAuthenticated, userController.postUpdateProfile);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 
+app.post('/mirror', passportConf.isAuthenticated, mirrorController.postMirror);
 /**
  * API examples routes.
  */
 app.get('/api/github', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getGithub);
 
-app.get('/auth/github', passport.authenticate('github'));
+app.get('/auth/github', passport.authenticate('github', { scope: 'repo,admin:org' }));
 app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }), function(req, res) {
   res.redirect(req.session.returnTo || '/');
 });

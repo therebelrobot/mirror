@@ -5,8 +5,13 @@ var mongoose = require('mongoose');
 var userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
   password: String,
+
+  facebook: String,
+  twitter: String,
+  google: String,
   github: String,
-  githubUsername: String,
+  instagram: String,
+  linkedin: String,
   tokens: Array,
 
   profile: {
@@ -17,7 +22,6 @@ var userSchema = new mongoose.Schema({
     picture: { type: String, default: '' }
   },
 
-  mirrors: Array,
   resetPasswordToken: String,
   resetPasswordExpires: Date
 });

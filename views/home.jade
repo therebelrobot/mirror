@@ -6,11 +6,19 @@ block content
   hr
   if !user
     .row
+      .col-sm-12
+        p Github, by design, restricts the number of times you can fork a repo into a single account. Even then, after forking, you are bound to the upstream in your repo page, which if you are doing an iterative work can sometimes be a hinderance to marketing. 
+          | There are 
+          a(href='https://adrianshort.org/create-multiple-forks-of-a-github-repo/') hacks
+          | &nbsp;and 
+          a(href='http://therebelrobot.com/tech/2015/10/16/a-simple-method-to-fork-repos-more-than-once.html') workarounds
+          | &nbsp;for this, but <strong>manualfork</strong> provides a user-friendly UI to apply them without command line knowledge.
+    .row
       .col-sm-4
         h2 
-          i.fa.fa-send-o
-          | Free Like a Bird
-        p Github restricts the number of times you can fork a repo into a single account. Even then, after forking, you are bound to the upstream in your repo page, which if you are doing an iterative work can sometimes be a hinderance to marketing. There are hacks and workarounds for this, but <strong>manualfork</strong> provides a user-friendly UI to apply them without command line knowledge.
+          i.fa.fa-files-o
+          | Infinite Copies
+        p Ever wanted to start a new project based off an old one? You can do that using <strong>manualfork</strong>. Just put in the source and target repos, and we'll do the rest for you. Easy peasy.
       .col-sm-4
         h2 
           i.fa.fa-code-fork
@@ -33,40 +41,65 @@ block content
   else
     .row
       .col-sm-6
-        h2 Create a new fork
-        p Input the branch and account info below, and we'll get you started!
-        form
+        h2 create a new mirror
+        p Input the source and target info below, and we'll get you started!
+        form(action="/mirror", method="post")
+          input(type='hidden', name='_csrf', value=_csrf)
           .form-group
-            label(for='repo-name') Repository
-            input.form-control(name='repo-name' type='text')
+            label(for='source') Source Repo
+            input.form-control(name='source' type='text' placeholder='username/repo')
           .form-group
-            label(for='account') Account to fork into
-            input.form-control(name='account' type='text')
-          button.btn.btn-primary Queue your fork
+            label(for='target') Target Repo
+            input.form-control(name='target' type='text' placeholder='username/repo')
+          .checkbox
+            label(for="create")
+              input(type="checkbox", name="create", checked)
+              | Create repo on fork
+          button.btn.btn-primary(type="submit") Mirror this repo!
       .col-sm-6
-        h2 Fork queue
-        p Forking takes a bit of time. We need to download the repo, recreate 
-          code .git
-          | &nbsp;info, and push it back up to your account. As such, there's a queue to process.
-        p
-          h2 Queue: 
-          h2 You are number: 
-    hr
-    .row
-      .col-sm-6
-        h2 Manage Forks
-        ul
-          li Repo 1
-          li Repo 2
-          li Repo 3
-      .col-sm-6
-        h2 manualfork badges
-        p Have you built something that can benefit from manualforking? Add a badge to your repo!
-        p
-          img(src='/img/badge-big.png')
-          br
-          br
-          img(src='/img/badge-mid.png')
-          br
-          br
-          img(src='/img/badge-small.png')
+        h2 recent forks
+        | &nbsp;
+        a.small.hidden(href="#") Clear recent forks
+        ul.fork-list
+          if mirrors.length
+            each mirror in mirrors
+              li 
+                a(href="https://github.com/#{mirror.target.account}/#{mirror.target.repo}")
+                  span.title= mirror.target.account+'/'+mirror.target.repo
+                a(href="https://github.com/#{mirror.target.account}/#{mirror.target.repo}")
+                  span.upstream= mirror.source.account+'/'+mirror.source.repo
+                span.date #{mirror.mirrorDate}
+          else
+            li 
+              span.title No Recent Mirrors.
+              span.upstream Mirror a repo to have it show up here.
+  hr
+  .row
+    .col-sm-6
+      h2 repo badges
+      p Already use manualfork? Want to have your repo mirrored instead of forked? Add a badge to your repo!
+      p
+        .badge-box.col-sm-6
+          code.copy [![manualfork this repo](http://manualfork.therebelrobot.com/badge-large.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)
+          img.float.right(src='/badge-large.svg')
+        br
+        br
+        .badge-box.col-sm-6
+          code.copy [![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)
+          img.float.right(src='/badge-mid.svg')
+        br
+        br
+        .badge-box.col-sm-6
+          code.copy [![manualfork this repo](http://manualfork.therebelrobot.com/badge-small.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)
+          img.float.right(src='/badge-small.svg')
+    .col-sm-6
+      h2 cli utility
+      p Want to skip the middleman? Use the CLI tool!
+      p
+        | You can find the 
+        code middleman
+        | cli utility on the npm registry. Usage details can be found 
+        a(href="https://github.com/therebelrobot/node-manualfork") on Github
+        br
+        img.npm(src="https://nodei.co/npm/manualfork.png?downloads=true")
+        img.npm(src="https://nodei.co/npm-dl/manualfork.png?months=3&height=2")
