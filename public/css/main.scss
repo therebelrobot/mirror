@@ -33,6 +33,17 @@ footer {
   p, ul {
     margin-bottom: 0;
   }
+  ul{
+    float: left;
+    padding-left: 10px !important;
+    margin-left: 10px !important;
+    .fa{
+      font-size:25px;
+      position:relative;
+      top:3px;
+      left:2px;
+    }
+  }
 }
 
 // Navbar
@@ -69,6 +80,7 @@ footer {
 
 
 .navbar{
+  z-index:2;
   .navbar-brand{
     & > img{
       height:25px;
@@ -217,4 +229,22 @@ img.npm {
 }
 .hidden{
   display:none;
+}
+.gitter-open-chat-button {
+  background-color:hsla(217, 97%, 65%, 0.75);
+  color:transparent;
+  max-width:150px;
+  max-height:40px;
+  &:before{
+    content: "Need help?";
+    color:white;
+  }
+  &:hover{
+    box-sizing: border-box;
+    background-color: hsla(217, 97%, 65%, 1);
+    color:transparent;
+    &:before{
+      text-decoration: underline;
+    }
+  }
 }

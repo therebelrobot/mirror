@@ -12351,6 +12351,19 @@ footer p, footer ul {
   margin-bottom: 0;
 }
 
+footer ul {
+  float: left;
+  padding-left: 10px !important;
+  margin-left: 10px !important;
+}
+
+footer ul .fa {
+  font-size: 25px;
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+
 .navbar-nav img {
   width: 30px;
   height: 30px;
@@ -12369,6 +12382,10 @@ footer p, footer ul {
 
 .fa {
   margin-right: 6px;
+}
+
+.navbar {
+  z-index: 2;
 }
 
 .navbar .navbar-brand > img {
@@ -12548,4 +12565,26 @@ img.npm {
 
 .hidden {
   display: none;
+}
+
+.gitter-open-chat-button {
+  background-color: rgba(79, 146, 252, 0.75);
+  color: transparent;
+  max-width: 150px;
+  max-height: 40px;
+}
+
+.gitter-open-chat-button:before {
+  content: "Need help?";
+  color: white;
+}
+
+.gitter-open-chat-button:hover {
+  box-sizing: border-box;
+  background-color: #4f92fc;
+  color: transparent;
+}
+
+.gitter-open-chat-button:hover:before {
+  text-decoration: underline;
 }

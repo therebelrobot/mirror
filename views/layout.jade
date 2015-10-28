@@ -17,6 +17,11 @@ html
       block content
 
     include partials/footer
+    script.
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'therebelrobot/manualfork'
+      };
+    script(src="https://sidecar.gitter.im/dist/sidecar.v1.js", async, defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.16/vue.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js')
     script(src='/js/lib/jquery.min.js')
