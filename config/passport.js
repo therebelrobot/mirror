@@ -83,7 +83,11 @@ passport.use(new LocalStrategy({ usernameField: 'email' }, function (email, pass
     if (err) {
       done(err)
     }
-    if (!user) return done(null, false, { message: 'Email ' + email + ' not found'})
+    if (!user) {
+      return done(null, false, {
+        message: 'Email ' + email + ' not found'
+      })
+    }
     user.comparePassword(password, function (err, isMatch) {
       if (err) {
         done(err)
@@ -267,7 +271,6 @@ passport.use(new TwitterStrategy(secrets.twitter, function (req, accessToken, to
         })
       }
     })
-
   } else {
     User.findOne({ twitter: profile.id }, function (err, existingUser) {
       if (err) {

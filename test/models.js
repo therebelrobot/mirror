@@ -31,7 +31,7 @@ describe('User Model', function () {
   it('should find user by email', function (done) {
     User.findOne({ email: 'test@gmail.com' }, function (err, user) {
       if (err) return done(err)
-      user.email.should.equal('test@gmail.com')
+      expect(user.email).to.equal('test@gmail.com')
       done()
     })
   })

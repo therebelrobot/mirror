@@ -168,7 +168,6 @@ exports.getGithub = function (req, res, next) {
       repo: repo
     })
   })
-
 }
 
 /**
@@ -321,7 +320,9 @@ exports.postTwitter = function (req, res, next) {
   })
   T.post('statuses/update', { status: req.body.tweet }, function (err, data, response) {
     if (err) return next(err)
-    req.flash('success', { msg: 'Tweet has been posted.'})
+    req.flash('success', {
+      msg: 'Tweet has been posted.'
+    })
     res.redirect('/api/twitter')
   })
 }
@@ -439,7 +440,9 @@ exports.postTwilio = function (req, res, next) {
   }
   twilio.sendMessage(message, function (err, responseData) {
     if (err) return next(err.message)
-    req.flash('success', { msg: 'Text sent to ' + responseData.to + '.'})
+    req.flash('success', {
+      msg: 'Text sent to ' + responseData.to + '.'
+    })
     res.redirect('/api/twilio')
   })
 }

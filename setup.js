@@ -171,7 +171,6 @@ cancel.on('press', function () {
   home.focus()
   home.remove(inner)
   screen.render()
-
 })
 
 var emailForm = blessed.form({
@@ -298,7 +297,6 @@ emailCancel.on('press', function () {
   home.focus()
   home.remove(emailForm)
   screen.render()
-
 })
 
 home.on('select', function (child, index) {
