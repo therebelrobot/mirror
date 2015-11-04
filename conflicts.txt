@@ -1,0 +1,46 @@
+warning: Cannot merge binary files: public/favicon.png (HEAD vs. upstream/master)
+Auto-merging views/partials/header.jade
+CONFLICT (add/add): Merge conflict in views/partials/header.jade
+Auto-merging views/partials/footer.jade
+CONFLICT (add/add): Merge conflict in views/partials/footer.jade
+Auto-merging views/layout.jade
+CONFLICT (add/add): Merge conflict in views/layout.jade
+Auto-merging views/home.jade
+CONFLICT (add/add): Merge conflict in views/home.jade
+Auto-merging views/account/profile.jade
+CONFLICT (add/add): Merge conflict in views/account/profile.jade
+Auto-merging test/models.js
+CONFLICT (add/add): Merge conflict in test/models.js
+Auto-merging test/app.js
+CONFLICT (add/add): Merge conflict in test/app.js
+Auto-merging setup.js
+CONFLICT (add/add): Merge conflict in setup.js
+Auto-merging public/js/main.js
+CONFLICT (add/add): Merge conflict in public/js/main.js
+Auto-merging public/favicon.png
+CONFLICT (add/add): Merge conflict in public/favicon.png
+Auto-merging public/css/main.scss
+CONFLICT (add/add): Merge conflict in public/css/main.scss
+Auto-merging package.json
+CONFLICT (add/add): Merge conflict in package.json
+Auto-merging models/User.js
+CONFLICT (add/add): Merge conflict in models/User.js
+Auto-merging controllers/user.js
+CONFLICT (add/add): Merge conflict in controllers/user.js
+Auto-merging controllers/home.js
+CONFLICT (add/add): Merge conflict in controllers/home.js
+Auto-merging controllers/contact.js
+CONFLICT (add/add): Merge conflict in controllers/contact.js
+Auto-merging controllers/api.js
+CONFLICT (add/add): Merge conflict in controllers/api.js
+Auto-merging config/secrets.js
+CONFLICT (add/add): Merge conflict in config/secrets.js
+Auto-merging config/passport.js
+CONFLICT (add/add): Merge conflict in config/passport.js
+Auto-merging app.js
+CONFLICT (add/add): Merge conflict in app.js
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+Auto-merging .gitignore
+CONFLICT (add/add): Merge conflict in .gitignore
+Automatic merge failed; fix conflicts and then commit the result.

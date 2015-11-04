@@ -2,6 +2,7 @@
  * GET /
  * Home page.
  */
+<<<<<<< HEAD
 var moment = require('moment')
 var _ = require('lodash')
 exports.index = function(req, res) {
@@ -17,3 +18,10 @@ exports.index = function(req, res) {
     mirrors: mirrors
   });
 };
+=======
+exports.index = function (req, res) {
+  res.render('home', {
+    title: 'Home'
+  })
+}
+>>>>>>> upstream/master

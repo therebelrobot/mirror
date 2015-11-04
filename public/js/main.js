@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Localstorage helper
 
 var _ls = {
@@ -118,4 +119,12 @@ $(document).ready(function () {
       params: params
     }
   })
+=======
+/* Definitions for JS Standard */
+/* global $ */
+
+$(document).ready(function () {
+  // Place JavaScript code here...
+
+>>>>>>> upstream/master
 })

@@ -9,10 +9,13 @@
 // Scaffolding
 // -------------------------
 
+<<<<<<< HEAD
 *:not(code):not(.fa){
   font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
+=======
+>>>>>>> upstream/master
 html {
   position: relative;
   min-height: 100%;
@@ -33,6 +36,7 @@ footer {
   p, ul {
     margin-bottom: 0;
   }
+<<<<<<< HEAD
   ul{
     float: left;
     padding-left: 10px !important;
@@ -44,6 +48,8 @@ footer {
       left:2px;
     }
   }
+=======
+>>>>>>> upstream/master
 }
 
 // Navbar
@@ -76,6 +82,7 @@ footer {
 
 .fa {
   margin-right: 6px;
+<<<<<<< HEAD
 }
 
 
@@ -248,3 +255,6 @@ img.npm {
     }
   }
 }
+=======
+}
+>>>>>>> upstream/master

@@ -5,18 +5,27 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='csrf-token', content=_csrf)
+<<<<<<< HEAD
     title #{title} - manualfork
     link(rel="icon", href="/favicon.png")
     link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+=======
+    title #{title} - Hackathon Starter
+>>>>>>> upstream/master
     link(rel='stylesheet', href='/css/main.css')
   body
     include partials/header
 
+<<<<<<< HEAD
     #vue-app.container
+=======
+    .container
+>>>>>>> upstream/master
       include partials/flash
       block content
 
     include partials/footer
+<<<<<<< HEAD
     script.
       ((window.gitter = {}).chat = {}).options = {
         room: 'therebelrobot/manualfork'
@@ -24,6 +33,9 @@ html
     script(src="https://sidecar.gitter.im/dist/sidecar.v1.js", async, defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.16/vue.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js')
+=======
+
+>>>>>>> upstream/master
     script(src='/js/lib/jquery.min.js')
     script(src='/js/lib/bootstrap.min.js')
     script(src='/js/main.js')
@@ -35,5 +47,9 @@ html
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+<<<<<<< HEAD
       ga('create', 'UA-59630297-1', 'auto');
+=======
+      ga('create', 'UA-XXXXX-X', 'auto');
+>>>>>>> upstream/master
       ga('send', 'pageview');

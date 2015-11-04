@@ -20,7 +20,10 @@
  */
 
 module.exports = {
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
   db: process.env.MONGODB || process.env.MONGOLAB_URI || 'mongodb://localhost:27017/test',
 
   sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here',
@@ -62,18 +65,29 @@ module.exports = {
     callbackURL: '/auth/instagram/callback',
     passReqToCallback: true
   },
+<<<<<<< HEAD
   
 
   github: {
     clientID: process.env.GITHUB_ID || 'b2185cd0bebb412ea9d3',
     clientSecret: process.env.GITHUB_SECRET || '8315ad0f265a416638bb9298fa315fd0199e93e5',
+=======
+
+  github: {
+    clientID: process.env.GITHUB_ID || 'cb448b1d4f0c743a1e36',
+    clientSecret: process.env.GITHUB_SECRET || '815aa4606f476444691c5f1c16b9c70da6714dc6',
+>>>>>>> upstream/master
     callbackURL: '/auth/github/callback',
     passReqToCallback: true
   },
 
   twitter: {
     consumerKey: process.env.TWITTER_KEY || '6NNBDyJ2TavL407A3lWxPFKBI',
+<<<<<<< HEAD
     consumerSecret: process.env.TWITTER_SECRET  || 'ZHaYyK3DQCqv49Z9ofsYdqiUgeoICyh6uoBgFfu7OeYC7wTQKa',
+=======
+    consumerSecret: process.env.TWITTER_SECRET || 'ZHaYyK3DQCqv49Z9ofsYdqiUgeoICyh6uoBgFfu7OeYC7wTQKa',
+>>>>>>> upstream/master
     callbackURL: '/auth/twitter/callback',
     passReqToCallback: true
   },
@@ -149,4 +163,8 @@ module.exports = {
     bitcoinNetwork: process.env.BITCORE_BITCOIN_NETWORK || 'testnet'
   }
 
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> upstream/master

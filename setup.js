@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var fs = require('fs');
 var os = require('os');
 var blessed = require('blessed');
@@ -9,15 +10,36 @@ if (os.platform() === 'win32') {
   console.log('https://github.com/chjj/blessed fixes the issue #179.');
   console.log('**************************************************************');
   process.exit();
+=======
+var fs = require('fs')
+var os = require('os')
+var blessed = require('blessed')
+var multiline = require('multiline')
+
+if (os.platform() === 'win32') {
+  console.log('**************************************************************')
+  console.log('Hackathon Starter Generator has been disabled on Windows until')
+  console.log('https://github.com/chjj/blessed fixes the issue #179.')
+  console.log('**************************************************************')
+  process.exit()
+>>>>>>> upstream/master
 }
 
 var screen = blessed.screen({
   autoPadding: true
+<<<<<<< HEAD
 });
 
 screen.key('q', function() {
   process.exit(0);
 });
+=======
+})
+
+screen.key('q', function () {
+  process.exit(0)
+})
+>>>>>>> upstream/master
 
 var home = blessed.list({
   parent: screen,
@@ -33,24 +55,40 @@ var home = blessed.list({
     '» ADD NODE.JS CLUSTER SUPPORT',
     '» EXIT'
   ]
+<<<<<<< HEAD
 });
 
 var homeTitle = blessed.text({
+=======
+})
+
+blessed.text({ // homeTitle
+>>>>>>> upstream/master
   parent: screen,
   align: 'center',
   fg: 'blue',
   bg: 'white',
   content: 'Hackathon Starter (c) 2014'
+<<<<<<< HEAD
 });
 
 var footer = blessed.text({
+=======
+})
+
+blessed.text({ // footer
+>>>>>>> upstream/master
   parent: screen,
   bottom: 0,
   fg: 'white',
   bg: 'blue',
   tags: true,
   content: ' {cyan-fg}<Up/Down>{/cyan-fg} moves | {cyan-fg}<Enter>{/cyan-fg} selects | {cyan-fg}<q>{/cyan-fg} exits'
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> upstream/master
 
 var inner = blessed.form({
   top: 'center',
@@ -66,7 +104,11 @@ var inner = blessed.form({
   },
   fg: 'white',
   bg: 'red'
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> upstream/master
 
 var success = blessed.box({
   top: 'center',
@@ -84,6 +126,7 @@ var success = blessed.box({
   fg: 'white',
   bg: 'green',
   padding: 1
+<<<<<<< HEAD
 });
 
 success.on('keypress', function() {
@@ -92,15 +135,31 @@ success.on('keypress', function() {
 });
 
 var clusterText = blessed.text({
+=======
+})
+
+success.on('keypress', function () {
+  home.focus()
+  home.remove(success)
+})
+
+blessed.text({ // clusterText
+>>>>>>> upstream/master
   top: 'top',
   bg: 'red',
   fg: 'white',
   tags: true,
   content: 'Take advantage of multi-core systems using built-in {underline}cluster{/underline} module.'
+<<<<<<< HEAD
 });
 
 
 var enable = blessed.button({
+=======
+})
+
+blessed.button({ // enable
+>>>>>>> upstream/master
   parent: inner,
   bottom: 0,
   mouse: true,
@@ -120,10 +179,16 @@ var enable = blessed.button({
       bg: 'white'
     }
   }
+<<<<<<< HEAD
 });
 
 
 var disable = blessed.button({
+=======
+})
+
+blessed.button({ // disable
+>>>>>>> upstream/master
   parent: inner,
   bottom: 0,
   left: 10,
@@ -144,7 +209,11 @@ var disable = blessed.button({
       bg: 'white'
     }
   }
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> upstream/master
 
 var cancel = blessed.button({
   parent: inner,
@@ -167,6 +236,7 @@ var cancel = blessed.button({
       bg: 'white'
     }
   }
+<<<<<<< HEAD
 });
 
 cancel.on('press', function() {
@@ -176,6 +246,15 @@ cancel.on('press', function() {
 
 });
 
+=======
+})
+
+cancel.on('press', function () {
+  home.focus()
+  home.remove(inner)
+  screen.render()
+})
+>>>>>>> upstream/master
 
 var emailForm = blessed.form({
   mouse: true,
@@ -183,6 +262,7 @@ var emailForm = blessed.form({
   fg: 'white',
   bg: 'blue',
   padding: { left: 1, right: 1 }
+<<<<<<< HEAD
 });
 
 emailForm.on('submit', function() {
@@ -222,13 +302,58 @@ emailForm.on('submit', function() {
 });
 
 var emailText = blessed.text({
+=======
+})
+
+emailForm.on('submit', function () {
+  var contactCtrl = fs.readFileSync('controllers/contact.js').toString().split(os.EOL)
+  var userCtrl = fs.readFileSync('controllers/user.js').toString().split(os.EOL)
+  var choice = null
+
+  if (sendgridRadio.checked) {
+    choice = 'SendGrid'
+  } else if (mailgunRadio.checked) {
+    choice = 'Mailgun'
+  } else if (mandrillRadio.checked) {
+    choice = 'Mandrill'
+  }
+
+  var index = contactCtrl.indexOf('var transporter = nodemailer.createTransport({')
+  contactCtrl.splice(index + 1, 1, "  service: '" + choice + "',")
+  contactCtrl.splice(index + 3, 1, '    user: secrets.' + choice.toLowerCase() + '.user,')
+  contactCtrl.splice(index + 4, 1, '    pass: secrets.' + choice.toLowerCase() + '.password')
+  fs.writeFileSync('controllers/contact.js', contactCtrl.join(os.EOL))
+
+  index = userCtrl.indexOf('      var transporter = nodemailer.createTransport({')
+  userCtrl.splice(index + 1, 1, "        service: '" + choice + "',")
+  userCtrl.splice(index + 3, 1, '          user: secrets.' + choice.toLowerCase() + '.user,')
+  userCtrl.splice(index + 4, 1, '          pass: secrets.' + choice.toLowerCase() + '.password')
+  index = userCtrl.indexOf('      var transporter = nodemailer.createTransport({', (index + 1))
+  userCtrl.splice(index + 1, 1, "        service: '" + choice + "',")
+  userCtrl.splice(index + 3, 1, '          user: secrets.' + choice.toLowerCase() + '.user,')
+  userCtrl.splice(index + 4, 1, '          pass: secrets.' + choice.toLowerCase() + '.password')
+  fs.writeFileSync('controllers/user.js', userCtrl.join(os.EOL))
+
+  home.remove(emailForm)
+  home.append(success)
+  success.setContent('Email Service has been switched to ' + choice)
+  success.focus()
+  screen.render()
+})
+
+blessed.text({ // emailText
+>>>>>>> upstream/master
   parent: emailForm,
   content: 'Select one of the following email service providers for {underline}contact form{/underline} and {underline}password reset{/underline}.',
   padding: 1,
   bg: 'red',
   fg: 'white',
   tags: true
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> upstream/master
 
 var sendgridRadio = blessed.radiobutton({
   parent: emailForm,
@@ -238,7 +363,11 @@ var sendgridRadio = blessed.radiobutton({
   fg: 'white',
   bg: 'blue',
   content: 'SendGrid'
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> upstream/master
 
 var mailgunRadio = blessed.radiobutton({
   parent: emailForm,
@@ -247,7 +376,11 @@ var mailgunRadio = blessed.radiobutton({
   fg: 'white',
   bg: 'blue',
   content: 'Mailgun'
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> upstream/master
 
 var mandrillRadio = blessed.radiobutton({
   parent: emailForm,
@@ -256,7 +389,11 @@ var mandrillRadio = blessed.radiobutton({
   fg: 'white',
   bg: 'blue',
   content: 'Mandrill'
+<<<<<<< HEAD
 });
+=======
+})
+>>>>>>> upstream/master
 
 var emailSubmit = blessed.button({
   parent: emailForm,
@@ -273,11 +410,19 @@ var emailSubmit = blessed.button({
       bg: 'red'
     }
   }
+<<<<<<< HEAD
 });
 
 emailSubmit.on('press', function() {
   emailForm.submit();
 });
+=======
+})
+
+emailSubmit.on('press', function () {
+  emailForm.submit()
+})
+>>>>>>> upstream/master
 
 var emailCancel = blessed.button({
   parent: emailForm,
@@ -295,6 +440,7 @@ var emailCancel = blessed.button({
       bg: 'red'
     }
   }
+<<<<<<< HEAD
 });
 
 emailCancel.on('press', function() {
@@ -348,4 +494,56 @@ for (var i = 0; i < os.cpus().length; i++) {
   });
 
   fs.writeFileSync('cluster_app.js', fileContents);
+=======
+})
+
+emailCancel.on('press', function () {
+  home.focus()
+  home.remove(emailForm)
+  screen.render()
+})
+
+home.on('select', function (child, index) {
+  switch (index) {
+    case 0:
+      home.append(emailForm)
+      emailForm.focus()
+      break
+    case 1:
+      addClusterSupport()
+      home.append(success)
+      success.setContent('New file {underline}cluster_app.js{/underline} has been created. Your app is now able to use more than 1 CPU by running {underline}node cluster_app.js{/underline}, which in turn spawns multiple instances of {underline}app.js{/underline}')
+      success.focus()
+      screen.render()
+      break
+    default:
+      process.exit(0)
+  }
+})
+
+screen.render()
+
+function addClusterSupport () {
+  var fileContents = multiline(function () {
+    /*
+    var os = require('os')
+    var cluster = require('cluster')
+
+    cluster.setupMaster({
+      exec: 'app.js'
+    })
+
+    cluster.on('exit', function(worker) {
+      console.log('worker ' + worker.id + ' died')
+      cluster.fork()
+    })
+
+    for (var i = 0; i < os.cpus().length; i++) {
+      cluster.fork()
+    }
+    */
+  })
+
+  fs.writeFileSync('cluster_app.js', fileContents)
+>>>>>>> upstream/master
 }
