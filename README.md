@@ -4,7 +4,9 @@ A simple, restriction-less forking tool for Github
 
 [![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)](http://manualfork.therebelrobot.com/?source=therebelrobot/manualfork)
 ![Heroku](http://heroku-badge.herokuapp.com/?app=manualfork&style=flat)
+[![](https://ga-beacon.appspot.com/UA-59630297-4/manualfork/README?flat)](https://github.com/igrigorik/ga-beacon)
 [![Join the chat at https://gitter.im/therebelrobot/manualfork](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/therebelrobot/manualfork?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 Github, by design, restricts the number of times you can fork a repo into a single account. Even then, after forking, you are bound to the upstream in your repo page, which if you are doing an iterative work can sometimes be a hinderance to marketing. There are [hacks](https://adrianshort.org/create-multiple-forks-of-a-github-repo/)  [and](http://therebelrobot.com/tech/2015/10/16/a-simple-method-to-fork-repos-more-than-once.html)  [workarounds](https://help.github.com/articles/duplicating-a-repository/) for this, but **manualfork** provides a user-friendly UI to apply them without command line knowledge.
 
