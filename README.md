@@ -1432,13 +1432,14 @@ January 2014 and over a **120** issues and pull requests from **28** contributor
 Contributing
 ------------
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 If something is unclear, confusing, or needs to be refactored, please let me know.
 Pull requests are always welcome, but due to the opinionated nature of this
 project, I cannot accept every pull request. Please open an issue before
-submitting a pull request. This project uses
-[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) with a
-few minor exceptions. If you are submitting a pull request that involves
-Jade templates, please make sure you are using *spaces*, not tabs.
+submitting a pull request. This project uses [feross/standard](https://github.com/feross/standard)
+styling. If you are submitting a pull request that involves Jade templates,
+please make sure you are using *spaces*, not tabs.
 
 License
 -------
