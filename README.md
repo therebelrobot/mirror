@@ -42,14 +42,15 @@ Already use mirror? Want to have your repo mirrored instead of forked? Add a bad
 
 Want to skip the middleman? Use the CLI tool!
 
-You can find the `middleman` cli utility on the npm registry. Usage details can be found [at therebelrobot/mirror](https://github.com/therebelrobot/node-mirror)
+You can find the `mirror-repo` cli utility on the npm registry. Usage details can be found [at therebelrobot/mirror-repo](https://github.com/therebelrobot/mirror-repo)
 
-![](https://nodei.co/npm/mirror.png?downloads=true)
-![](https://nodei.co/npm-dl/mirror.png?months=3&height=2)
+[![](https://nodei.co/npm/mirror-repo.png?downloads=true)](https://github.com/therebelrobot/mirror-repo)
+[![](https://nodei.co/npm-dl/mirror-repo.png?months=3&height=2)](https://github.com/therebelrobot/mirror-repo)
 
 ## roadmap
 
 - [ ] convert to feross/standard
+- [ ] allow for cloning of wikis and issues
 - [ ] **cleanup**: remove unneeded hackathon-starter components
 - [ ] add support for enterprise repos
 - [ ] add UI sugar: repo url checking, etc.
