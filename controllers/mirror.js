@@ -1,6 +1,6 @@
 var _ = require('lodash')
 var User = require('../models/User')
-var mirror = require('mirror').fork
+var mirror = require('mirror-repo').repo
 var request = require('request')
 var _ = require('lodash')
 
@@ -24,17 +24,17 @@ exports.postMirror = function (req, res, next) {
   // get token
   var token = _.filter(req.user.tokens, {kind: 'github'})[0].accessToken
   console.log(token)
-  var mfOpts = {
+  var mirrorOpts = {
     username: req.user.githubUsername,
     oauth: token,
     source: source,
     target: target
   }
   if (req.body.create) {
-    mfOpts.create = true
+    mirrorOpts.create = true
   }
-  console.log(mfOpts)
-  var mirrorRepo = mirror(mfOpts)
+  console.log(mirrorOpts)
+  var mirrorRepo = mirror(mirrorOpts)
   mirrorRepo.then(function (results) {
     // Update User Repos
     User.findById(req.user.id, function (err, user) {

@@ -17,13 +17,13 @@ block content
       .col-sm-4
         h2 
           i.fa.fa-files-o
-          | Infinite Copies
+          | 1:1 Copies
         p Ever wanted to start a new project based off an old one? You can do that using <strong>mirror</strong>. Just put in the source and target repos, and we'll do the rest for you. Easy peasy.
       .col-sm-4
         h2 
           i.fa.fa-code-fork
           | Infinite Forks
-        p Ever wanted more than one fork of a repo? Boilerplates? Iterative works? <strong>mirror</strong> lets you fork to your heart's content.
+        p Ever wanted more than one fork of a repo? Templates? Boilerplates? <strong>mirror</strong> lets you fork to your heart's content.
       .col-sm-4
         h2 
           i.fa.fa-chain-broken
@@ -36,7 +36,7 @@ block content
           a.btn.btn-block.btn-github.btn-social(href='/auth/github')
             i.fa.fa-github
             | Sign in with GitHub
-          | &nbsp;&nbsp;to fork your first.
+          | &nbsp;&nbsp;to mirror your first.
         
   else
     .row
@@ -57,9 +57,9 @@ block content
               | Create repo on fork
           button.btn.btn-primary(type="submit") Mirror this repo!
       .col-sm-6
-        h2 recent forks
+        h2 recent mirrors
         | &nbsp;
-        a.small.hidden(href="#") Clear recent forks
+        a.small.hidden(href="#") Clear recent mirrors
         ul.fork-list
           if mirrors.length
             each mirror in mirrors
@@ -97,9 +97,9 @@ block content
       p Want to skip the middleman? Use the CLI tool!
       p
         | You can find the 
-        code middleman
+        code mirror-repo
         | cli utility on the npm registry. Usage details can be found 
-        a(href="https://github.com/therebelrobot/node-mirror") on Github
+        a(href="https://github.com/therebelrobot/mirror-repo") on Github
         br
-        img.npm(src="https://nodei.co/npm/mirror.png?downloads=true")
-        img.npm(src="https://nodei.co/npm-dl/mirror.png?months=3&height=2")
+        img.npm(src="https://nodei.co/npm/mirror-repo.png?downloads=true")
+        img.npm(src="https://nodei.co/npm-dl/mirror-repo.png?months=3&height=2")
