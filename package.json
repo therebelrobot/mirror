@@ -1,9 +1,9 @@
 {
-  "name": "hackathon-starter",
-  "version": "3.1.0",
+  "name": "mirror-app",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": "https://github.com/therebelrobot/mirror.git"
   },
   "scripts": {
     "start": "node app.js",

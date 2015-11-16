@@ -1,6 +1,6 @@
 var _ = require('lodash')
 var User = require('../models/User')
-var manualfork = require('manualfork').fork
+var mirror = require('mirror').fork
 var request = require('request')
 var _ = require('lodash')
 
@@ -34,7 +34,7 @@ exports.postMirror = function (req, res, next) {
     mfOpts.create = true
   }
   console.log(mfOpts)
-  var mirrorRepo = manualfork(mfOpts)
+  var mirrorRepo = mirror(mfOpts)
   mirrorRepo.then(function (results) {
     // Update User Repos
     User.findById(req.user.id, function (err, user) {
@@ -55,7 +55,7 @@ exports.postMirror = function (req, res, next) {
           req.flash('errors', err)
           return res.redirect('/')
         }
-        req.flash('success', { msg: 'Manualfork of ' + source.account + '/' + source.repo + ' to ' + target.account + '/' + target.repo + ' was successful.' })
+        req.flash('success', { msg: 'mirror of ' + source.account + '/' + source.repo + ' to ' + target.account + '/' + target.repo + ' was successful.' })
         res.redirect(req.session.returnTo || '/')
       })
     })
@@ -65,7 +65,7 @@ exports.postMirror = function (req, res, next) {
     res.redirect(req.session.returnTo || '/')
   })
 // // Fork Repo here
-// req.flash('success', { msg: 'Manualfork of '+source+' to '+target+' was successful.' })
+// req.flash('success', { msg: 'mirror of '+source+' to '+target+' was successful.' })
 // res.redirect(req.session.returnTo || '/')
 }
 

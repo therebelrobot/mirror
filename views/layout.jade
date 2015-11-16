@@ -5,7 +5,7 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='csrf-token', content=_csrf)
-    title #{title} - manualfork
+    title #{title} - mirror
     link(rel="icon", href="/favicon.png")
     link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/css/main.css')
@@ -19,7 +19,7 @@ html
     include partials/footer
     script.
       ((window.gitter = {}).chat = {}).options = {
-        room: 'therebelrobot/manualfork'
+        room: 'therebelrobot/mirror'
       };
     script(src="https://sidecar.gitter.im/dist/sidecar.v1.js", async, defer)
     script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.16/vue.min.js')

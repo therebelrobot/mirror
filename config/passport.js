@@ -5,7 +5,7 @@ var GitHubApi = require('github')
 var github = new GitHubApi({
   version: '3.0.0',
   headers: {
-    'user-agent': 'manualfork-app' // GitHub is happy with a unique user agent
+    'user-agent': 'mirror-app' // GitHub is happy with a unique user agent
   }
 })
 var secrets = require('./secrets')

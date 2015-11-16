@@ -1,51 +1,51 @@
-# manualfork
+# mirror
 
 A simple, restriction-less forking tool for Github
 
-[![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)](http://manualfork.therebelrobot.com/?source=therebelrobot/manualfork)
-![Heroku](http://heroku-badge.herokuapp.com/?app=manualfork&style=flat)
-[![](https://ga-beacon.appspot.com/UA-59630297-4/manualfork/README?flat)](https://github.com/igrigorik/ga-beacon)
-[![Join the chat at https://gitter.im/therebelrobot/manualfork](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/therebelrobot/manualfork?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![mirror this repo](http://mirror.therebelrobot.com/badge-mid.svg)](http://mirror.therebelrobot.com/?source=therebelrobot/mirror)
+![Heroku](http://heroku-badge.herokuapp.com/?app=mirror&style=flat)
+[![](https://ga-beacon.appspot.com/UA-59630297-4/mirror/README?flat)](https://github.com/igrigorik/ga-beacon)
+[![Join the chat at https://gitter.im/therebelrobot/mirror](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/therebelrobot/mirror?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-Github, by design, restricts the number of times you can fork a repo into a single account. Even then, after forking, you are bound to the upstream in your repo page, which if you are doing an iterative work can sometimes be a hinderance to marketing. There are [hacks](https://adrianshort.org/create-multiple-forks-of-a-github-repo/)  [and](http://therebelrobot.com/tech/2015/10/16/a-simple-method-to-fork-repos-more-than-once.html)  [workarounds](https://help.github.com/articles/duplicating-a-repository/) for this, but **manualfork** provides a user-friendly UI to apply them without command line knowledge.
+Github, by design, restricts the number of times you can fork a repo into a single account. Even then, after forking, you are bound to the upstream in your repo page, which if you are doing an iterative work can sometimes be a hinderance to marketing. There are [hacks](https://adrianshort.org/create-multiple-forks-of-a-github-repo/)  [and](http://therebelrobot.com/tech/2015/10/16/a-simple-method-to-fork-repos-more-than-once.html)  [workarounds](https://help.github.com/articles/duplicating-a-repository/) for this, but **mirror** provides a user-friendly UI to apply them without command line knowledge.
 
 ### infinite copies
 
-Ever wanted to start a new project based off an old one? You can do that using **manualfork**. Just put in the source and target repos, and we'll do the rest for you. Easy peasy.
+Ever wanted to start a new project based off an old one? You can do that using **mirror**. Just put in the source and target repos, and we'll do the rest for you. Easy peasy.
 
 ### infinite forks
 
-Ever wanted more than one fork of a repo? Boilerplates? Iterative works? **manualfork** lets you fork to your heart's content.
+Ever wanted more than one fork of a repo? Boilerplates? Iterative works? **mirror** lets you fork to your heart's content.
 
 ### break from upstream
 
-Making a brand new iterative work? What do you do if you want to fork and break from the upstream entirely? With normal forking, your repo will always link back to the upstream version next to the title, but **manualfork** gives you the power to break free and start fresh.
+Making a brand new iterative work? What do you do if you want to fork and break from the upstream entirely? With normal forking, your repo will always link back to the upstream version next to the title, but **mirror** gives you the power to break free and start fresh.
 
 ## repo badges
 
-Already use manualfork? Want to have your repo mirrored instead of forked? Add a badge to your repo!
+Already use mirror? Want to have your repo mirrored instead of forked? Add a badge to your repo!
 
-![manualfork this repo](http://manualfork.therebelrobot.com/badge-large.svg)
+![mirror this repo](http://mirror.therebelrobot.com/badge-large.svg)
 
-`[![manualfork this repo](http://manualfork.therebelrobot.com/badge-large.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)`
+`[![mirror this repo](http://mirror.therebelrobot.com/badge-large.svg)](http://mirror.therebelrobot.com/?source=USER/REPO)`
 
-![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)
+![mirror this repo](http://mirror.therebelrobot.com/badge-mid.svg)
 
-`[![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)`
+`[![mirror this repo](http://mirror.therebelrobot.com/badge-mid.svg)](http://mirror.therebelrobot.com/?source=USER/REPO)`
 
-![manualfork this repo](http://manualfork.therebelrobot.com/badge-small.svg)
+![mirror this repo](http://mirror.therebelrobot.com/badge-small.svg)
 
-`[![manualfork this repo](http://manualfork.therebelrobot.com/badge-small.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)`
+`[![mirror this repo](http://mirror.therebelrobot.com/badge-small.svg)](http://mirror.therebelrobot.com/?source=USER/REPO)`
 
 ## cli utility
 
 Want to skip the middleman? Use the CLI tool!
 
-You can find the `middleman` cli utility on the npm registry. Usage details can be found [at therebelrobot/manualfork](https://github.com/therebelrobot/node-manualfork)
+You can find the `middleman` cli utility on the npm registry. Usage details can be found [at therebelrobot/mirror](https://github.com/therebelrobot/node-mirror)
 
-![](https://nodei.co/npm/manualfork.png?downloads=true)
-![](https://nodei.co/npm-dl/manualfork.png?months=3&height=2)
+![](https://nodei.co/npm/mirror.png?downloads=true)
+![](https://nodei.co/npm-dl/mirror.png?months=3&height=2)
 
 ## roadmap
 

@@ -103,14 +103,14 @@ $(document).ready(function () {
       params[param.key] = param.value
     })
     JSONparams = JSON.stringify(params)
-    _ls.write('manualfork-params', JSONparams)
+    _ls.write('mirror-params', JSONparams)
     paramsToLocalhost = true
   }
   // retrieve/clear params from localstorage
-  if (_ls.exists('manualfork-params') && !paramsToLocalhost) {
-    JSONparams = _ls.retrieve('manualfork-params')
+  if (_ls.exists('mirror-params') && !paramsToLocalhost) {
+    JSONparams = _ls.retrieve('mirror-params')
     params = JSON.parse(JSONparams)
-    _ls.remove('manualfork-params')
+    _ls.remove('mirror-params')
   }
   window.vm = new Vue({
     el: '#vue-app',

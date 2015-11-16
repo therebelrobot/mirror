@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 manualfork
+  h1 mirror
   p.lead A simple, restriction-less forking tool for Github
   hr
   if !user
@@ -12,23 +12,23 @@ block content
           a(href='https://adrianshort.org/create-multiple-forks-of-a-github-repo/') hacks
           | &nbsp;and 
           a(href='http://therebelrobot.com/tech/2015/10/16/a-simple-method-to-fork-repos-more-than-once.html') workarounds
-          | &nbsp;for this, but <strong>manualfork</strong> provides a user-friendly UI to apply them without command line knowledge.
+          | &nbsp;for this, but <strong>mirror</strong> provides a user-friendly UI to apply them without command line knowledge.
     .row
       .col-sm-4
         h2 
           i.fa.fa-files-o
           | Infinite Copies
-        p Ever wanted to start a new project based off an old one? You can do that using <strong>manualfork</strong>. Just put in the source and target repos, and we'll do the rest for you. Easy peasy.
+        p Ever wanted to start a new project based off an old one? You can do that using <strong>mirror</strong>. Just put in the source and target repos, and we'll do the rest for you. Easy peasy.
       .col-sm-4
         h2 
           i.fa.fa-code-fork
           | Infinite Forks
-        p Ever wanted more than one fork of a repo? Boilerplates? Iterative works? <strong>manualfork</strong> lets you fork to your heart's content.
+        p Ever wanted more than one fork of a repo? Boilerplates? Iterative works? <strong>mirror</strong> lets you fork to your heart's content.
       .col-sm-4
         h2 
           i.fa.fa-chain-broken
           | Break From Upstream
-        p Making a brand new iterative work? What do you do if you want to fork and break from the upstream entirely? With normal forking, your repo will always link back to the upstream version next to the title, but <strong>manualfork</strong> gives you the power to break free and start fresh.
+        p Making a brand new iterative work? What do you do if you want to fork and break from the upstream entirely? With normal forking, your repo will always link back to the upstream version next to the title, but <strong>mirror</strong> gives you the power to break free and start fresh.
     .row
       .col-sm-4.callout
         h2 Want to get started?
@@ -77,20 +77,20 @@ block content
   .row
     .col-sm-6
       h2 repo badges
-      p Already use manualfork? Want to have your repo mirrored instead of forked? Add a badge to your repo!
+      p Already use mirror? Want to have your repo mirrored instead of forked? Add a badge to your repo!
       p
         .badge-box.col-sm-6
-          code.copy [![manualfork this repo](http://manualfork.therebelrobot.com/badge-large.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)
+          code.copy [![mirror this repo](http://mirror.therebelrobot.com/badge-large.svg)](http://mirror.therebelrobot.com/?source=USER/REPO)
           img.float.right(src='/badge-large.svg')
         br
         br
         .badge-box.col-sm-6
-          code.copy [![manualfork this repo](http://manualfork.therebelrobot.com/badge-mid.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)
+          code.copy [![mirror this repo](http://mirror.therebelrobot.com/badge-mid.svg)](http://mirror.therebelrobot.com/?source=USER/REPO)
           img.float.right(src='/badge-mid.svg')
         br
         br
         .badge-box.col-sm-6
-          code.copy [![manualfork this repo](http://manualfork.therebelrobot.com/badge-small.svg)](http://manualfork.therebelrobot.com/?source=USER/REPO)
+          code.copy [![mirror this repo](http://mirror.therebelrobot.com/badge-small.svg)](http://mirror.therebelrobot.com/?source=USER/REPO)
           img.float.right(src='/badge-small.svg')
     .col-sm-6
       h2 cli utility
@@ -99,7 +99,7 @@ block content
         | You can find the 
         code middleman
         | cli utility on the npm registry. Usage details can be found 
-        a(href="https://github.com/therebelrobot/node-manualfork") on Github
+        a(href="https://github.com/therebelrobot/node-mirror") on Github
         br
-        img.npm(src="https://nodei.co/npm/manualfork.png?downloads=true")
-        img.npm(src="https://nodei.co/npm-dl/manualfork.png?months=3&height=2")
+        img.npm(src="https://nodei.co/npm/mirror.png?downloads=true")
+        img.npm(src="https://nodei.co/npm-dl/mirror.png?months=3&height=2")
