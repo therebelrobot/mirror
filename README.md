@@ -5,7 +5,6 @@
 A simple, restriction-less forking tool for Github
 
 [![mirror this repo](http://mirror.therebelrobot.com/badge-mid.svg)](http://mirror.therebelrobot.com/?source=therebelrobot/mirror)
-![Heroku](http://heroku-badge.herokuapp.com/?app=mirror&style=flat)
 [![](https://ga-beacon.appspot.com/UA-59630297-4/mirror/README?flat)](https://github.com/igrigorik/ga-beacon)
 [![Join the chat at https://gitter.im/therebelrobot/mirror](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/therebelrobot/mirror?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
