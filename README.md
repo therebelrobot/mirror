@@ -1,6 +1,6 @@
 ![mirror-banner](/mirror-banner.png)
 
-# mirror
+# [mirror](http://mirror.therebelrobot.com/)
 
 A simple, restriction-less forking tool for Github
 
@@ -11,7 +11,7 @@ A simple, restriction-less forking tool for Github
 
 Github, by design, restricts the number of times you can fork a repo into a single account. Even then, after forking, you are bound to the upstream in your repo page, which if you are doing an iterative work can sometimes be a hinderance to marketing. There are [hacks](https://adrianshort.org/create-multiple-forks-of-a-github-repo/)  [and](http://therebelrobot.com/tech/2015/10/16/a-simple-method-to-fork-repos-more-than-once.html) [workarounds](https://help.github.com/articles/duplicating-a-repository/) for this, but **mirror** provides a user-friendly UI to apply them without command line knowledge.
 
-### infinite copies
+### 1:1 copies
 
 Ever wanted to start a new project based off an old one? You can do that using **mirror**. Just put in the source and target repos, and we'll do the rest for you. Easy peasy.
 
