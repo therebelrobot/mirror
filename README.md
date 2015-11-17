@@ -1,8 +1,8 @@
 ![mirror-banner](/mirror-banner.png)
 
-# [mirror](http://mirror.therebelrobot.com/)
+# mirror
 
-A simple, restriction-less forking tool for Github
+A simple, restriction-less forking tool for Github. See it in action at [mirror.therebelrobot.com](http://mirror.therebelrobot.com/)
 
 [![mirror this repo](http://mirror.therebelrobot.com/badge-mid.svg)](http://mirror.therebelrobot.com/?source=therebelrobot/mirror)
 [![](https://ga-beacon.appspot.com/UA-59630297-4/mirror/README?flat)](https://github.com/igrigorik/ga-beacon)
