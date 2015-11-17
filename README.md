@@ -43,10 +43,10 @@ Already use mirror? Want to have your repo mirrored instead of forked? Add a bad
 
 Want to skip the middleman? Use the CLI tool!
 
-You can find the `mirror-repo` cli utility on the npm registry. Usage details can be found [at therebelrobot/mirror-repo](https://github.com/therebelrobot/mirror-repo)
+You can find the `mirror-cli` cli utility on the npm registry. Usage details can be found [at therebelrobot/mirror-cli](https://github.com/therebelrobot/mirror-cli)
 
-[![](https://nodei.co/npm/mirror-repo.png?downloads=true)](https://github.com/therebelrobot/mirror-repo)
-[![](https://nodei.co/npm-dl/mirror-repo.png?months=3&height=2)](https://github.com/therebelrobot/mirror-repo)
+[![](https://nodei.co/npm/mirror-cli.png?downloads=true)](https://github.com/therebelrobot/mirror-cli)
+[![](https://nodei.co/npm-dl/mirror-cli.png?months=3&height=2)](https://github.com/therebelrobot/mirror-cli)
 
 ## roadmap
 
